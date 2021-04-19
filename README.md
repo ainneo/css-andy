@@ -1,2 +1,2 @@
 # css-andy
-A collection of animations
+A collection of CSS animations
