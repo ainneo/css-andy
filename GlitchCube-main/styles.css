@@ -1,0 +1,148 @@
+/* ENVIRONMENT */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+}
+
+img, video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FIELD */
+
+#plane {
+    position: absolute;
+    top: calc(50% - 300px);
+    left: calc(50% - 300px);
+    perspective: 600rem;
+}
+
+/* ANIMATED CONTAINER */
+
+#cube {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: cubeAnimate 30s infinite normal linear;
+}
+
+@keyframes cubeAnimate {
+    0% {
+        transform: rotate3d(1, 1, 0, -360deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 0, 0);
+    }
+}
+
+/* FACES */
+
+.faces {
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    border-style: solid;
+    border-color: grey;
+    border-width: 1px;
+    opacity: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#one {
+    transform: translateZ(300px);
+}
+
+#two {
+    transform: translateZ(-300px);
+}
+
+#three {
+    transform: translateX(300px) rotateY(90deg);
+}
+
+#four {
+    transform: translateX(-300px) rotateY(90deg);
+}
+
+#five {
+    transform: translateY(-300px) rotateX(90deg);
+    animation: face5 10s 1 normal linear;
+}
+
+#six {
+    transform: translateY(300px) rotateX(90deg);
+}
+
+
+/* TEXT CONTENT */
+
+.text {
+    position: absolute;
+    color:white;
+    font-size: 100px;
+    letter-spacing: 30px;
+}
+
+.text:before, .text:after {
+    position: absolute;
+    content: attr(data-text);
+    color: black;
+    justify-content: space-between;
+}
+
+.text:before{
+    left: 4px;
+    text-shadow: 4px 0 cyan;
+    animation: reveal 5s linear infinite normal;
+}
+.text:after{
+    left: -4px;
+    text-shadow: -4px 0 magenta;
+    animation: reveal 5s linear infinite normal;
+}
+
+@keyframes reveal {
+    0% {
+        clip: rect(110px, auto, auto, auto);
+    }
+    10% {
+        clip: rect(85px, auto, auto, auto);
+    }
+    20% {
+        clip: rect(60px, auto, auto, auto);
+    }
+    30% {
+        clip: rect(35px, auto, auto, auto);
+    }
+    40% {
+        clip: rect(10px, auto, auto, auto);
+    }
+    50% {
+        clip: rect(10px, 800px, auto, auto);
+    }   
+    60% {
+        clip: rect(10px, 600px, auto, auto);
+    }
+    70% {
+        clip: rect(10px, 400px, auto, auto);
+    }
+    80% {
+        clip: rect(10px, 200px, auto, auto);
+    }
+    100% {
+        clip: rect(10px, 0px, auto, auto);
+    }
+    100% {
+        clip: rect(10px, 0px, auto, auto);
+    }
+}

@@ -1,0 +1,145 @@
+body {
+    background-color: black;
+}
+
+div {
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+    position: absolute; 
+    border-radius: 50%;
+    border-style: solid;
+    border-color: cyan;
+    animation: gyro 50s infinite alternate linear;
+}
+
+/* .planet {
+    height: 20px;
+    width: 20px;
+    top: 200px;
+    left: -150px;
+    animation-name: moon;
+    border-width: 0.05px;
+}
+
+.planet2 {
+    height: 20px;
+    width: 20px;
+    top: 200px;
+    left: 520px;
+    animation-name: moon;
+    border-width: 0.05px;
+} */
+
+.ring {
+    height: 400px;
+    width: 400px;
+    /* animation-name: gyro; */
+    transform:rotateY(180deg);
+}
+
+.ring1 {
+    top: calc(50% -  50px);
+    left: calc(50% - 50px);
+    height: 100px;
+    width: 100px;
+    animation-name: gyro2;
+    border-width: 0.25px;
+}
+
+.ring2 {
+    top: calc(50% -  100px);
+    left: calc(50% - 100px);
+    height: 200px;
+    width: 200px;
+    animation-name: gyro3;
+}
+
+.one {
+    transform: rotateY(45deg);
+}
+
+.two {
+    transform: rotateY(90deg);
+}
+
+.three {
+    transform: rotateY(135deg);
+}
+
+.four {
+    transform: rotateY(180deg);
+}
+
+.five {
+    transform: rotateY(225deg);
+}
+
+.six {
+    transform: rotateY(270deg);
+}
+
+.seven {
+    transform: rotateY(315deg);
+}
+
+.eight {
+    transform: rotateY(360deg);
+}
+
+.nine {
+    transform: rotateX(45deg);
+}
+
+.ten {
+    transform: rotateX(90deg);
+}
+
+.eleven {
+    transform: rotateX(135deg);
+}
+
+.twelve {
+    transform: rotateX(180deg);
+}
+
+.thirteen {
+    transform: rotateX(225deg);
+}
+
+.fourteen {
+    transform: rotateX(270deg);
+}
+
+.fifteen {
+    transform: rotateX(315deg);
+}
+
+.sixteen {
+    transform: rotateX(360deg);
+}
+
+@keyframes gyro {
+    0% {
+    transform: rotateY(3600deg); 
+    }
+    100% {
+    }
+}
+
+@keyframes gyro2 {
+    0% {
+        transform: rotateX(360deg) rotateY(360deg); 
+    }
+    100% {
+    }
+}
+
+@keyframes moon {
+    0% {
+        transform: rotateX(3600deg) rotateY(3600deg);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+

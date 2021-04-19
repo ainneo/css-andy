@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+}
+
+div {
+    position: absolute;
+    top: calc(100% - 50px);
+    left: calc(50% - 50px);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: gold;
+    animation: flipCoin 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes flipCoin {
+    0%{
+        transform: rotatex(180deg)
+    }
+    50%{
+        transform: translateY(-55rem)
+    }
+    100%{
+        transform: rotatex(180deg)
+    }
+}
+

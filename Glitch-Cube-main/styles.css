@@ -1,0 +1,277 @@
+/* ENVIRONMENT */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FIELD */
+
+#plane {
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    perspective: 200rem;
+}
+
+/* ANIMATED CONTAINER */
+
+#cube {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: cubeAnimate 10s infinite alternate ease-in-out;
+}
+
+@keyframes cubeAnimate {
+    0% {
+    transform: rotate3d(0, 0, 0, 0);
+    
+    }
+    80% {
+    transform: rotate3d(1, 1, 1, 360deg);
+    }
+}
+
+
+/* FACES */
+
+.faces {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    border-style: solid;
+    border-color:black;
+    background: black;;
+    opacity: 50%;
+}
+
+#one {
+    transform: translateZ(100px);
+    animation: face1 5s 1 alternate ease-in-out;
+}
+
+#two {
+    transform: translateZ(-100px);
+    animation: face2 5s 1 alternate ease-in-out;
+}
+
+#three {
+    transform: translateX(100px) rotateY(90deg);
+    animation: face3 5s 1 alternate ease-in-out;
+}
+
+#four {
+    transform: translateX(-100px) rotateY(90deg);
+    animation: face4 5s 1 alternate ease-in-out;
+}
+
+#five {
+    transform: translateY(-100px) rotateX(90deg);
+    animation: face5 5s 1 alternate ease-in-out;
+}
+
+#six {
+    transform: translateY(100px) rotateX(90deg);
+    animation: face6 5s 1 alternate ease-in-out;
+}
+
+/* FACE ANIMATIONS */
+
+@keyframes face1 {
+    0% {
+        transform: scale(.25)  translateY(50px) translateX(50px);
+        border-color: black;;
+        background: transparent;
+    }
+    20% {
+        transform: scale(.35) rotate3d(1, 1, 1, 360deg);
+        border-color: black;;
+        background: transparent;
+    }
+    40% {
+        transform: scale(.45) translateY(400px) translateX(400px);
+        border-color: black;;
+        background: transparent;
+    }
+    60% {
+        transform: scale(.55) rotate3d(1, 1, 1, 360deg) translateY(400px) translateX(400px); 
+        border-color: black;;
+        background: transparent;
+    }
+    80% {
+        transform: rotate3d(1, 1, 1, 760deg) translateY(400px) translateX(400px);
+        border-color: black;;
+        background: transparent;
+    }
+}
+
+@keyframes face2 {
+    0% {
+        transform: scale(.25) translateY(-50px) translateX(-50px);
+        border-color: black;;
+        background: transparent;
+    }
+    20% {
+        transform: scale(.35) rotate3d(1, 1, 1, 360deg);
+        border-color: black;;
+        background: transparent;
+    }
+    40% {
+        transform: scale(.45)  translateY(-400px) translateX(-400px);
+        border-color: black;;
+        background: transparent;
+    }
+    60% {
+        transform: scale(.55) rotate3d(1, 1, 1, 360deg) translateY(-400px) translateX(-400px); 
+        border-color: black;;
+        background: transparent;
+    }
+    80% {
+        transform: rotate3d(1, 1, 1, 760deg) translateY(-400px) translateX(-400px);
+        border-color: black;;
+        background: transparent;
+    }
+
+    }
+
+@keyframes face3 {
+    0% {
+        transform: scale(.25) translateY(100px) translateX(-100px);
+        border-color: black;;
+        background: transparent;
+    }
+    20% {
+        transform: scale(.35) rotate3d(1, 1, 1, 360deg);
+        border-color: black;;
+        background: transparent;
+    }
+    40% {
+        transform: scale(.45) translateY(400px) translateX(-400px);
+        border-color: black;;
+        background: transparent;
+    }
+    60% {
+        transform: scale(.55) rotate3d(1, 1, 1, 360deg) translateY(400px) translateX(-400px); 
+        border-color: black;;
+        background: transparent;
+    }
+    80% {
+        transform: rotate3d(1, 1, 1, 760deg) translateY(400px) translateX(-400px);
+        border-color: black;;
+        background: transparent;
+    }
+
+}   
+
+@keyframes face4 {
+    0% {
+        transform: scale(.25) translateY(-100px) translateX(100px);
+        border-color: black;;
+        background: transparent;
+    }
+    20% {
+        transform: scale(.35) rotate3d(1, 1, 1, 360deg);
+        border-color: black;;
+        background: transparent;
+    }
+    40% {
+        transform: scale(.45) translateY(-400px) translateX(400px);
+        border-color: black;;
+        background: transparent;
+    }
+    60% {
+        transform: scale(.55) rotate3d(1, 1, 1, 360deg) translateY(-400px) translateX(400px); 
+        border-color: black;;
+        background: transparent;
+    }
+    80% {
+        transform: rotate3d(1, 1, 1, 760deg) translateY(-400px) translateX(400px);
+        border-color: black;;
+        background: transparent;
+    }
+
+}
+
+@keyframes face5 {
+    0% {
+        transform: scale(.25) translateY(200px);
+        border-color: black;;
+        background: transparent;
+    }
+    20% {
+        transform: scale(.35) rotate3d(1, 1, 1, 360deg);
+        border-color: black;;
+        background: transparent;
+    }
+    40% {
+        transform: scale(.45) translateY(600px);
+        border-color: black;;
+        background: transparent;
+    }
+    60% {
+        transform: scale(.55) rotate3d(1, 1, 1, 360deg) translateY(600px); 
+        border-color: black;;
+        background: transparent;
+    }
+    80% {
+        transform: rotate3d(1, 1, 1, 760deg) translateY(600px);
+        border-color: black;;
+        background: transparent;
+    }
+
+}
+
+@keyframes face6 {
+    0% {
+        transform: scale(.25) translateY(-200px);
+        border-color: black;;
+        background: transparent;
+    }    
+    20% {
+        transform: scale(.35) rotate3d(1, 1, 1, 360deg);
+        border-color: black;;
+        background: transparent;
+    }
+    40% {
+        transform: scale(.45) translateY(-600px);
+        border-color: black;;
+        background: transparent;
+    }
+    60% {
+        transform: scale(.55) rotate3d(1, 1, 1, 360deg) translateY(-600px); 
+        border-color: black;;
+        background: transparent;
+    }
+    80% {
+        transform: rotate3d(1, 1, 1, 760deg) translateY(-600px);
+        border-color: black;;
+        background: transparent;
+    }
+}
+
+/* writing */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap'); 
+
+h1 {
+    position: relative;
+    top: 25%;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    letter-spacing: .75rem;
+    font-size: 1rem;
+    line-height: 2rem;
+}

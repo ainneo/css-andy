@@ -1,0 +1,149 @@
+/* ENVIRONMENT */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color:black;
+}
+
+/* FIELD */
+
+#plane {
+    position: absolute;
+    top: calc(50% - 300px);
+    left: calc(50% - 300px);
+    perspective: 600rem;
+}
+
+/* ANIMATED CONTAINER */
+
+#cube {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: cubeAnimate 20s infinite normal linear;
+}
+
+@keyframes cubeAnimate {
+    0% {
+        transform: rotate3d(1, 1, 0, -360deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 0, 0);
+    }
+}
+
+/* FACES */
+
+.faces {
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    border-style: solid;
+    background-color:black;
+    border-color: grey;
+    border-width: 3px;
+    animation: reveal 15s linear 1 normal;
+}
+
+.deck {
+    display: flex;
+}
+
+#one {
+    transform: translateZ(300px);
+}
+
+#two {
+    transform: translateZ(-300px) rotateY(180deg);
+}
+
+#three {
+    transform: translateX(300px) rotateY(90deg);
+}
+
+#four {
+    transform: translateX(-300px) rotateY(-90deg);
+}
+
+#five {
+    transform: translateY(-300px) rotateX(90deg);
+}
+
+#six {
+    transform: translateY(300px) rotateX(-90deg);
+}
+
+
+/* TEXT CONTENT */
+
+.text {
+    color: white;
+    font-size: 100px;
+    /* font-weight: 100; */
+    letter-spacing: 30px;
+    text-shadow: 
+        2px 1px magenta,
+        1px -2px cyan;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 
+        2px 1px magenta,
+        1px -2px cyan;
+    }
+    9% {
+        text-shadow: 
+        2px 1px magenta,
+        1px -2px cyan;
+    }
+    10% {
+        text-shadow: 
+        1px -2px magenta,
+        1px 2px cyan;
+    }
+    49% {
+        text-shadow: 
+        1px -2px magenta,
+        1px 2px cyan;
+    }
+    50% {
+        text-shadow: 
+        2px 1px magenta,
+        -2px -1px cyan;
+    }
+    99% {
+        text-shadow: 
+        2px 1px magenta,
+        -2px -1px cyan;
+    }
+    100% {
+        text-shadow: 
+        2px 2px magenta,
+        -2px -2px cyan;
+    }
+}
+
+/* animations */
+
+@keyframes reveal {
+    0% {
+        clip: rect(0px, auto, 120px, auto);
+    }
+    70% {
+        clip: rect(600px, auto, 720px, auto);
+    }
+    71% {
+        clip: rect(600px, auto, auto, auto);
+    }
+    100% {
+        clip: rect(0px, auto, auto, auto);
+    }
+}

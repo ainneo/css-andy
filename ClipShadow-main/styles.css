@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat', sans-serif;
+    background-color: black;
+}
+
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 250px;
+    letter-spacing: 48px;
+}
+
+.text:before, .text:after {
+    position: absolute;
+    content: "CLIP";
+}
+
+.text:before{
+    left: 3px;
+    text-shadow: -2px 0 cyan;
+    animation: glitch 2s linear infinite reverse;
+}
+.text:after{
+    left: -3px;
+    text-shadow: -2px 0 magenta;
+    animation: glitch 3s linear infinite reverse;
+}
+
+@keyframes glitch {
+    0% {
+        clip: rect(129px, auto, 36px, auto);
+    }
+    5% {
+        clip: rect(129px, auto, 4px, auto);
+    }
+    10% {
+        clip: rect(85px, auto, 4px, auto);
+    }
+    15% {
+        clip: rect(85px, auto, 91px, auto);
+    }
+    20% {
+        clip: rect(148px, auto, 91px, auto);
+    }
+    25% {
+        clip: rect(148px, auto, 122px, auto);
+    }
+    30% {
+        clip: rect(69px, auto, 122px auto);
+    }
+    35% {
+        clip: rect(69px, auto, 71px, auto);
+    }
+    40% {
+        clip: rect(146px, auto, 71px, auto);
+    }
+    45% {
+        clip: rect(146px, auto, 43px, auto);
+    }
+    50% {
+        clip: rect(102px, auto, 43px, auto);
+    }
+    55% {
+        clip: rect(102px, auto, 170px, auto);
+    }
+    60% {
+        clip: rect(141px, auto, 99px, auto);
+    }
+    65% {
+        clip: rect(141px, auto, 74px, auto);
+    }
+    70% {
+        clip: rect(20px, auto, 190px, auto);
+    }
+    75% {
+        clip: rect(20px, auto, 79px, auto);
+    }
+    80% {
+        clip: rect(78px, auto, 79px, auto);
+    }
+    85% {
+        clip: rect(78px, auto, 145px, auto);
+    }
+    90% {
+        clip: rect(67px, auto, 39px, auto);
+    }
+    95% {
+        clip: rect(67px, auto, 39px, auto);
+    }
+    100% {
+        clip: rect(83px, auto, 103px, auto);
+    }
+}
